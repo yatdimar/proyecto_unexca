@@ -17,65 +17,47 @@
   <link href="{% static 'ProyectoUniversidadApp/css/style.css' %}" rel="stylesheet">
 </head>
 
-<body>
+  <body>
 
-  <!-- ======= boton de navegacion movil ======= -->
-  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+    <!-- ======= boton de navegacion movil ======= -->
+    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+  {% block  content%}
+    
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex flex-column justify-content-center">
+  <!-- contenido cambiante -->
 
-    <nav class="nav-menu">
-      <ul>
-        <li class="active"><a href="{% url 'Index' %}"><i class="bx bx-home"></i> <span>Inicio</span></a></li>
-        <li><a href="{% url 'Credito' %}"><i class="bx bx-user"></i> <span>Riesgo de Credito</span></a></li>
-        <li><a href="{% url 'Financiero' %}"><i class="bx bx-file-blank"></i> <span>Riesgo Financiero</span></a></li>
-        <li><a href="{% url 'Operacional' %}"><i class="bx bx-book-content"></i> <span>Riesgo Operacional y Reputacional</span></a></li>
-        {% if user.is_authenticated %}
-        <li><a href="#"><i class="bx bx-user"></i> <span> Usuario: {{user.username}}</span></a></li>
-        <li><a href="{% url 'logout' %}"><i class="bx bx-book-content"></i> <span>Cerrar Sesión</span></a></li>
-        {% endif %}
-      </ul>
-    </nav><!-- .nav-menu -->
 
-  </header><!-- fin Header -->
+  {% endblock  %}
 
-<!-- contenido cambiante -->
-{% block  content%}
-
-{% endblock  %}
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; 2020 Copyright <strong><span>Aplicacion Realizada por</span></strong>: Humberto Díaz & Yatdimar Alvarado
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="container">
+        <div class="copyright">
+          &copy; 2020 Copyright <strong><span>Aplicacion Realizada por</span></strong>: Humberto Díaz & Yatdimar Alvarado
+        </div>
+        <div class="credits">
+        </div>
       </div>
-      <div class="credits">
-      </div>
-    </div>
-  </footer><!-- fin Footer -->
+    </footer><!-- fin Footer -->
 
-  <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
-  <div id="preloader"></div>
+    <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+    <div id="preloader"></div>
 
-  <!-- Vendor JS archivos -->
-  <script src="{% static 'ProyectoUniversidadApp/vendor/jquery/jquery.min.js' %}"></script>
-  <script src="{% static 'ProyectoUniversidadApp/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  <script src="{% static 'ProyectoUniversidadApp/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
-  <script src="{% static 'ProyectoUniversidadApp/vendor/php-email-form/validate.js' %}"></script>
-  <script src="{% static 'ProyectoUniversidadApp/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
-  <script src="{% static 'ProyectoUniversidadApp/vendor/counterup/counterup.min.js' %}"></script>
-  <script src="{% static 'ProyectoUniversidadApp/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
-  <script src="{% static 'ProyectoUniversidadApp/vendor/venobox/venobox.min.js' %}"></script>
-  <script src="{% static 'ProyectoUniversidadApp/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
-  <script src="{% static 'ProyectoUniversidadApp/vendor/typed.js/typed.min.js' %}"></script>
-  <script src="{% static 'ProyectoUniversidadApp/vendor/aos/aos.js' %}"></script>
+    <!-- Vendor JS archivos -->
+    <script src="{% static 'ProyectoUniversidadApp/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'ProyectoUniversidadApp/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'ProyectoUniversidadApp/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'ProyectoUniversidadApp/vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'ProyectoUniversidadApp/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'ProyectoUniversidadApp/vendor/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'ProyectoUniversidadApp/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'ProyectoUniversidadApp/vendor/venobox/venobox.min.js' %}"></script>
+    <script src="{% static 'ProyectoUniversidadApp/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'ProyectoUniversidadApp/vendor/typed.js/typed.min.js' %}"></script>
+    <script src="{% static 'ProyectoUniversidadApp/vendor/aos/aos.js' %}"></script>
 
-  <!-- Template Main JS File -->
-  <script src="{% static 'ProyectoUniversidadApp/js/main.js' %}"></script>
+    <!-- Template Main JS File -->
+    <script src="{% static 'ProyectoUniversidadApp/js/main.js' %}"></script>
 
-</body>
-
-
+  </body>
 </html>

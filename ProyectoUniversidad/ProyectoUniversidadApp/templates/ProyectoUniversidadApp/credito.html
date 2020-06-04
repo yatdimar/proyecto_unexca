@@ -10,5 +10,29 @@
         <h1>Riesgo de Credito</h1>
       </div>
     </section><!-- fin Seccion central -->
+    <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
+
+    <nav class="nav-menu">
+      <ul>
+        <li class="active"><a href="{% url 'Index' %}"><i class="bx bx-home"></i> <span>Inicio</span></a></li>
+        <li class="drop-down"><a href="#"><i class="bx bx-user"></i> <span>Morosidad</span></a>
+          <ul>
+            <li><a href="#">Tasa de Morosidad</a></li>
+            <li><a href="#">Morosidad por Produducto</a></li>
+            <li><a href="#">Drop Down 3</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><i class="bx bx-book-content"></i> <span>Cartera de Credito</span></a></li>
+        <li><a href="#"><i class="bx bx-book-content"></i> <span>RAROC</span></a></li>
+        <li><a href="#"><i class="bx bx-book-content"></i> <span>Perdida Esperada</span></a></li>
+        {% if user.is_authenticated %}
+        <li><a href="#"><i class="bx bx-user"></i> <span> Usuario: {{user.username}}</span></a></li>
+        <li><a href="{% url 'logout' %}"><i class="bx bx-book-content"></i> <span>Cerrar Sesión</span></a></li>
+        {% endif %}
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </header><!-- fin Header -->
 
   {% endblock  %}

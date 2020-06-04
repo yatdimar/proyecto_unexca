@@ -1,5 +1,31 @@
-<html>
-    <body>
-        financiero
-    </body>
-</html>
+{% extends 'ProyectoUniversidadApp/base.html' %}
+
+{% load static %}
+
+  {% block content %}
+
+    <!-- ======= Seccion central ======= -->
+    <section id="hero" class="d-flex flex-column justify-content-center">
+      <div class="container" data-aos="zoom-in" data-aos-delay="100">
+        <h1>Riesgo Financiero</h1>
+      </div>
+    </section><!-- fin Seccion central -->
+    <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
+
+    <nav class="nav-menu">
+      <ul>
+        <li class="active"><a href="{% url 'Index' %}"><i class="bx bx-home"></i> <span>Inicio</span></a></li>
+        <li><a href="{% url 'Credito' %}"><i class="bx bx-user"></i> <span>Riesgo de Credito</span></a></li>
+        <li><a href="{% url 'Financiero' %}"><i class="bx bx-file-blank"></i> <span>Riesgo Financiero</span></a></li>
+        <li><a href="{% url 'Operacional' %}"><i class="bx bx-book-content"></i> <span>Riesgo Operacional y Reputacional</span></a></li>
+        {% if user.is_authenticated %}
+        <li><a href="#"><i class="bx bx-user"></i> <span> Usuario: {{user.username}}</span></a></li>
+        <li><a href="{% url 'logout' %}"><i class="bx bx-book-content"></i> <span>Cerrar Sesión</span></a></li>
+        {% endif %}
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </header><!-- fin Header -->
+
+  {% endblock  %}
